@@ -47,7 +47,8 @@ sub option1{
 sub set_google_analytics{
 	my ($cb, %args) = @_;
 	my $content_ref = $args{content};
-	$$content_ref =~ s!</body>!<\!-- hoge -->\n</body>!;
+	my $hoge = 'hogehoge';
+	$$content_ref =~ s!</body>!<\!-- $hoge -->\n</body>!;
 }
 
 
