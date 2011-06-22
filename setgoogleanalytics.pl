@@ -48,7 +48,7 @@ sub set_google_analytics{
 	my ($cb, %args) = @_;
 	my $content_ref = $args{content};
 	my $getanalyticsID = $plugin->option1;
-	my $analyticsCode =<<'EOT';
+	my $analyticsCode =<<EOT;
 <script type="text/javascript"> 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '$getanalyticsID']);
@@ -60,6 +60,7 @@ sub set_google_analytics{
   })();
 </script> 
 EOT
+
 	$$content_ref =~ s!</body>!$analyticsCode</body>!;
 }
 
