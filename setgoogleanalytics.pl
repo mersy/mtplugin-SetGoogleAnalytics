@@ -16,6 +16,11 @@ my $plugin = MT::Plugin::SetGoogleAnalytics->new({
 	settings => new MT::PluginSettings([
 		['setanalyticsID',{Default =>''}],
 	]),
+	registry =>{
+		callbacks =>{
+			'build_page' => \&set_google_analytics,
+		},
+	},
 });
 MT->add_plugin($plugin);
 
@@ -39,5 +44,10 @@ sub option1{
 	}
 	$value;
 }
+sub set_google_analytics{
+	my ($cb, %args) = @_;
+	my $content_ref = $args{content};
+}
+
 
 1;
