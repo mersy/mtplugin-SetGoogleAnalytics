@@ -47,8 +47,8 @@ sub option1{
 sub set_google_analytics{
 	my ($cb, %args) = @_;
 	my $content_ref = $args{content};
-	my $hoge = 'hogehoge';
-	$$content_ref =~ s!</body>!<\!-- $hoge -->\n</body>!;
+	my $getanalyticsID = $plugin->option1;
+	$$content_ref =~ s!</body>!<\!-- $getanalyticsID -->\n</body>!;
 }
 
 
