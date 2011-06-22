@@ -10,8 +10,8 @@ my $plugin = MT::Plugin::SetGoogleAnalytics->new({
 	description => 'description',
 	author_name => 'mersy',
 	author_link => 'http://linker.in/',
-	plugin_link => 'http://linker.in/#2',
-	doc_link => 'http://linker.in/#3',
+	plugin_link => 'https://github.com/mersy/mtplugin-SetGoogleAnalytics',
+	doc_link => 'https://github.com/mersy/mtplugin-SetGoogleAnalytics/wiki',
 	config_template=>\&config_template,
 	settings => new MT::PluginSettings([
 		['setanalyticsID',{Default =>''}],
@@ -47,6 +47,7 @@ sub option1{
 sub set_google_analytics{
 	my ($cb, %args) = @_;
 	my $content_ref = $args{content};
+	
 }
 
 
